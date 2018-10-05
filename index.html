@@ -15,7 +15,7 @@
       <div class="col-12">
   <header>
     <nav>
-      <h1><a href="/">Restaurant Reviews</a></h1>
+      <h1><a href="/" tabindex="1">Restaurant Reviews</a></h1>
     </nav>
   </header>
 </div>
@@ -27,7 +27,7 @@
     <div class="row">
       <div class="col-12">
     <section id="map-container">
-      <div id="map"></div>
+      <div id="map" tabindex="0" aria-label="restaurent map" role="application"></div>
     </section>
   </div>
 </div>
@@ -39,20 +39,20 @@
       <div class="row">
       <div class="col-12">
       
-        <h2>Filter Results</h2>
+        <h2  tabindex="0" aria-label="Filter results">Filter Results</h2>
       </div>
     </div>
   
    
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
-          <option value="all">All Neighborhoods</option>
+        <select id="neighborhoods-select" name="neighborhoods" aria-labelledby="Select Neighborhood" tabindex="0"  role="listbox" onchange="updateRestaurants()">
+          <option value="all" role="option">All Neighborhoods</option>
         </select>
       
     
     
      
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
-          <option value="all">All Cuisines</option>
+        <select id="cuisines-select" name="cuisines" aria-labelledby="Select cuisine" onclick="" tabindex="0" role="listbox" onchange="updateRestaurants()">
+          <option value="all" role="option">All Cuisines</option>
         </select>
       
    </div>
@@ -60,7 +60,7 @@
    
 
       
-      <ul id="restaurants-list" ></ul>
+      <ul id="restaurants-list"  tabindex="0" aria-label="List of restaurants"></ul>
 
 
     </section>
@@ -71,8 +71,8 @@
   <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script> -->
 
 
-  <footer id="footer">
-    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  <footer id="footer" tabindex="0">
+    Copyright (c) 2017 <a href="/" tabindex="0"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
 
 </body>
