@@ -36,7 +36,7 @@ fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
     option.value = neighborhood;
-    
+    /* used the aria role for more accessibility*/
     option.setAttribute('role','option');
     select.append(option);
   });
@@ -66,6 +66,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     const option = document.createElement('option');
     option.innerHTML = cuisine;
     option.value = cuisine;
+     /* used the aria role for more accessibility*/
     option.setAttribute('role',"option");
     select.append(option);
   });
@@ -80,6 +81,7 @@ initMap = () => {
         zoom: 12,
         scrollWheelZoom: false
       });
+  /*added the mapbox token in the mapcontainer*/
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
     mapboxToken:'pk.eyJ1IjoiZmFtZWVuYSIsImEiOiJjam1ydm52ZGkyNTdzM3BueXZ5NmZkcXhmIn0.JnzljHThiZG6WFAdwEoLkg',
     maxZoom: 18,
@@ -165,30 +167,30 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.alt = `${restaurant.name} Restaurant`;
-  image.setAttribute('tabindex',0);
+  image.alt = `${restaurant.name} Restaurant`;/*added the alt attribute for images*/
+  image.setAttribute('tabindex',0);/*added the tabindex for elements */
   li.append(image);
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
-   name.setAttribute('tabindex', '0');
+   name.setAttribute('tabindex', '0');/*added the tabindex for elements */
   li.append(name);
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
-  neighborhood.setAttribute('tabindex', '0');
+  neighborhood.setAttribute('tabindex', '0');/*added the tabindex for elements */
   li.append(neighborhood);
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
-  address.setAttribute('tabindex', '0');
+  address.setAttribute('tabindex', '0');/*added the tabindex for elements */
   li.append(address);
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  more.setAttribute('tabindex','0');
-  more.setAttribute('aria-label', `More details about ${restaurant.name}`)
+  more.setAttribute('tabindex','0');/*added the tabindex for elements */
+  more.setAttribute('aria-label', `More details about ${restaurant.name}`)/*added the aria label for elements */
   li.append(more);
 
   return li;

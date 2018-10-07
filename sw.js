@@ -1,5 +1,5 @@
 let staticCacheName = 'restaurant-static-v1';
-
+/*creating a cache and storing all the pages offline in the cache storage*/
 self.addEventListener('install', function(event) {
 	event.waitUntil(
 		caches.open(staticCacheName).then(function(cache) {
@@ -29,6 +29,7 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('activate', function(event) {
+	/*deleting the old caches and updating the latest cache*/
 	event.waitUntil(
 		caches.keys()
 		.then(function(cacheNames) {
@@ -45,6 +46,8 @@ self.addEventListener('activate', function(event) {
 })
 
 self.addEventListener('fetch', function(event) {
+	/*respond to requests for the root page with
+  // the page skeleton from the cache*/
 	event.respondWith(
 		caches.match(event.request)
 		.then(function(response) {
