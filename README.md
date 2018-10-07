@@ -26,7 +26,7 @@ In order to run the application you have some options:
 * Download as .zip file or clone this project:
 
     ```
-    
+    https://github.com/fathimafameena/restaurentreview.git
     ```
 
 * In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer. 
