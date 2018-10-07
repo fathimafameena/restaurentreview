@@ -376,11 +376,11 @@ nav h1 a {
 }
 #reviews-list li p {
   margin: 0 0 10px;
-  font-size:18px;
+  font-size:16px;
 }
 #restaurant-hours td {
   color: #666;
-  font-size:18px;
+  font-size:16px;
 }
 /* added the media query to make it responsive in different viewport sizes*/
 @media (max-width: 600px) {
@@ -389,11 +389,11 @@ nav h1 a {
   }
   #reviews-list li p {
   margin: 0 0 10px;
-  font-size:16px;
+  font-size:12px;
 }
 #restaurant-hours td {
   color: #666;
-    font-size:16px;
+    font-size:12px;
 }
   #restaurant-container,#reviews-container{
 
@@ -411,11 +411,11 @@ nav h1 a {
   }
   #reviews-list li p {
   margin: 0 0 10px;
-  font-size:16px;
+  font-size:12px;
 }
 #restaurant-hours td {
   color: #666;
-    font-size:16px;
+    font-size:12px;
 }
  
   
